@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+
+<html lang="en-US" class="no-js">
+<head>
+	
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+	<!-- This site is optimized with the Yoast SEO plugin v14.9 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Learn Javascript - Variables &amp; Datatypes - Rajdeep Roy</title>
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://www.rajdeeproy.com/learn-javascript-variables-datatypes/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Learn Javascript - Variables &amp; Datatypes - Rajdeep Roy" />
+	<meta property="og:description" content="Hello Everyone, Here on this post on Javascript we are going to discuss the variables and data types in javascript. So, the first question that..." />
+	<meta property="og:url" content="https://www.rajdeeproy.com/learn-javascript-variables-datatypes/" />
+	<meta property="og:site_name" content="Rajdeep Roy" />
+	<meta property="article:published_time" content="2019-03-31T17:02:32+00:00" />
+	<meta property="og:image" content="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png" />
+	<meta property="og:image:width" content="300" />
+	<meta property="og:image:height" content="300" />
+	<meta name="twitter:card" content="summary" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rajdeeproy.com/#website","url":"https://rajdeeproy.com/","name":"Rajdeep Roy","description":"","potentialAction":[{"@type":"SearchAction","target":"https://rajdeeproy.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.rajdeeproy.com/learn-javascript-variables-datatypes/#primaryimage","inLanguage":"en-US","url":"https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png","width":"300","height":"300"},{"@type":"WebPage","@id":"https://www.rajdeeproy.com/learn-javascript-variables-datatypes/#webpage","url":"https://www.rajdeeproy.com/learn-javascript-variables-datatypes/","name":"Learn Javascript - Variables & Datatypes - Rajdeep Roy","isPartOf":{"@id":"https://rajdeeproy.com/#website"},"primaryImageOfPage":{"@id":"https://www.rajdeeproy.com/learn-javascript-variables-datatypes/#primaryimage"},"datePublished":"2019-03-31T17:02:32+00:00","dateModified":"2019-03-31T17:02:32+00:00","author":{"@id":"https://rajdeeproy.com/#/schema/person/e5dc76637760b5abdac8ed7951179075"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.rajdeeproy.com/learn-javascript-variables-datatypes/"]}]},{"@type":"Person","@id":"https://rajdeeproy.com/#/schema/person/e5dc76637760b5abdac8ed7951179075","name":"RajdeepRoy","image":{"@type":"ImageObject","@id":"https://rajdeeproy.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=96&d=mm&r=g","caption":"RajdeepRoy"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Rajdeep Roy &raquo; Feed" href="https://rajdeeproy.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Rajdeep Roy &raquo; Comments Feed" href="https://rajdeeproy.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Rajdeep Roy &raquo; Learn Javascript &#8211; Variables &#038; Datatypes Comments Feed" href="https://rajdeeproy.com/learn-javascript-variables-datatypes/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/rajdeeproy.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.4"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://rajdeeproy.com/wp-content/plugins/instagram-feed/css/sb-instagram-2-2.min.css?ver=2.4.6' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://rajdeeproy.com/wp-includes/css/dist/block-library/style.min.css?ver=5.5.4' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://rajdeeproy.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ctf_styles-css'  href='https://rajdeeproy.com/wp-content/plugins/custom-twitter-feeds/css/ctf-styles.min.css?ver=1.5.1' type='text/css' media='all' />
+<link rel='stylesheet' id='salient-social-css'  href='https://rajdeeproy.com/wp-content/plugins/salient-social/css/style.css?ver=1.1' type='text/css' media='all' />
+<style id='salient-social-inline-css' type='text/css'>
+
+  .sharing-default-minimal .nectar-love.loved,
+  body .nectar-social[data-color-override="override"].fixed > a:before, 
+  body .nectar-social[data-color-override="override"].fixed .nectar-social-inner a,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:hover {
+    background-color: #3452ff;
+  }
+  .nectar-social.hover .nectar-love.loved,
+  .nectar-social.hover > .nectar-love-button a:hover,
+  .nectar-social[data-color-override="override"].hover > div a:hover,
+  #single-below-header .nectar-social[data-color-override="override"].hover > div a:hover,
+  .nectar-social[data-color-override="override"].hover .share-btn:hover,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a {
+    border-color: #3452ff;
+  }
+  #single-below-header .nectar-social.hover .nectar-love.loved i,
+  #single-below-header .nectar-social.hover[data-color-override="override"] a:hover,
+  #single-below-header .nectar-social.hover[data-color-override="override"] a:hover i,
+  #single-below-header .nectar-social.hover .nectar-love-button a:hover i,
+  .nectar-love:hover i,
+  .hover .nectar-love:hover .total_loves,
+  .nectar-love.loved i,
+  .nectar-social.hover .nectar-love.loved .total_loves,
+  .nectar-social.hover .share-btn:hover, 
+  .nectar-social[data-color-override="override"].hover .nectar-social-inner a:hover,
+  .nectar-social[data-color-override="override"].hover > div:hover span,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:not(:hover) i,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:not(:hover) {
+    color: #3452ff;
+  }
+</style>
+<link rel='stylesheet' id='font-awesome-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/font-awesome.min.css?ver=4.6.4' type='text/css' media='all' />
+<link rel='stylesheet' id='salient-grid-system-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/grid-system.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='main-styles-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/style.css?ver=12.1.2' type='text/css' media='all' />
+<style id='main-styles-inline-css' type='text/css'>
+html:not(.page-trans-loaded) { background-color: #ffffff; }
+</style>
+<link rel='stylesheet' id='nectar-single-styles-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/single.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='nectar-element-recent-posts-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/elements/element-recent-posts.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/plugins/magnific.css?ver=8.6.0' type='text/css' media='all' />
+<link rel='stylesheet' id='nectar_default_font_open_sans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/responsive.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='skin-material-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/skin-material.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='nectar-widget-posts-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/elements/widget-nectar-posts.css?ver=12.1.2' type='text/css' media='all' />
+<link rel='stylesheet' id='dynamic-css-css'  href='https://rajdeeproy.com/wp-content/themes/salient/css/salient-dynamic-styles.css?ver=63667' type='text/css' media='all' />
+<style id='dynamic-css-inline-css' type='text/css'>
+.no-rgba #header-space{display:none;}@media only screen and (max-width:999px){body #header-space[data-header-mobile-fixed="1"]{display:none;}#header-outer[data-mobile-fixed="false"]{position:absolute;}}@media only screen and (max-width:999px){body:not(.nectar-no-flex-height) #header-space[data-secondary-header-display="full"]:not([data-header-mobile-fixed="false"]){display:block!important;margin-bottom:-50px;}#header-space[data-secondary-header-display="full"][data-header-mobile-fixed="false"]{display:none;}}@media only screen and (min-width:1000px){#header-space{display:none;}.nectar-slider-wrap.first-section,.parallax_slider_outer.first-section,.full-width-content.first-section,.parallax_slider_outer.first-section .swiper-slide .content,.nectar-slider-wrap.first-section .swiper-slide .content,#page-header-bg,.nder-page-header,#page-header-wrap,.full-width-section.first-section{margin-top:0!important;}body #page-header-bg,body #page-header-wrap{height:82px;}body #search-outer{z-index:100000;}}@media only screen and (min-width:1000px){#page-header-wrap.fullscreen-header,#page-header-wrap.fullscreen-header #page-header-bg,html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,#nectar_fullscreen_rows:not(.afterLoaded) > div{height:100vh;}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:100vh;}#page-header-bg[data-alignment-v="middle"] .span_6 .inner-wrap,#page-header-bg[data-alignment-v="top"] .span_6 .inner-wrap{padding-top:52px;}.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh + 2px)!important;}.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 30px)!important;}}@media only screen and (max-width:999px){#page-header-bg[data-alignment-v="middle"]:not(.fullscreen-header) .span_6 .inner-wrap,#page-header-bg[data-alignment-v="top"] .span_6 .inner-wrap{padding-top:34px;}.vc_row.top-level.full-width-section:not(.full-width-ns) > .span_12,#page-header-bg[data-alignment-v="bottom"] .span_6 .inner-wrap{padding-top:24px;}}@media only screen and (max-width:690px){.vc_row.top-level.full-width-section:not(.full-width-ns) > .span_12{padding-top:34px;}.vc_row.top-level.full-width-content .nectar-recent-posts-single_featured .recent-post-container > .inner-wrap{padding-top:24px;}}@media only screen and (max-width:999px){.full-width-ns .nectar-slider-wrap .swiper-slide[data-y-pos="middle"] .content,.full-width-ns .nectar-slider-wrap .swiper-slide[data-y-pos="top"] .content{padding-top:30px;}}#nectar_fullscreen_rows{background-color:;}
+</style>
+<link rel='stylesheet' id='redux-google-fonts-salient_redux-css'  href='https://fonts.googleapis.com/css?family=Roboto%3A500%2C700%7CNunito%3A300%2C700%2C400%2C400italic%7CMuli%3A600%7CMontserrat%3A500&#038;subset=latin&#038;ver=1600284769' type='text/css' media='all' />
+<script type='text/javascript' src='https://rajdeeproy.com/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<link rel="https://api.w.org/" href="https://rajdeeproy.com/wp-json/" /><link rel="alternate" type="application/json" href="https://rajdeeproy.com/wp-json/wp/v2/posts/257" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rajdeeproy.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://rajdeeproy.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.5.4" />
+<link rel='shortlink' href='https://rajdeeproy.com/?p=257' />
+<link rel="alternate" type="application/json+oembed" href="https://rajdeeproy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frajdeeproy.com%2Flearn-javascript-variables-datatypes%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://rajdeeproy.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Frajdeeproy.com%2Flearn-javascript-variables-datatypes%2F&#038;format=xml" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141403674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-141403674-1');
+</script><script type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	
+</head>
+
+
+<body class="post-template-default single single-post postid-257 single-format-standard material wpb-js-composer js-comp-ver-6.2.0 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="centered-menu" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="easeOutQuart" data-cad="700" data-megamenu-width="full-width" data-aie="zoom-out" data-ls="magnific" data-apte="standard" data-hhun="1" data-fancy-form-rcs="default" data-form-style="minimal" data-form-submit="regular" data-is="minimal" data-button-style="rounded_shadow" data-user-account-button="false" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="false" data-animated-anchors="true" data-ajax-transitions="true" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="slide-out-from-right" data-user-set-ocm="1" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="true" data-header-resize="0" data-header-color="custom" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="0" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false" >
+	
+	<script type="text/javascript"> if(navigator.userAgent.match(/(Android|iPod|iPhone|iPad|BlackBerry|IEMobile|Opera Mini)/)) { document.body.className += " using-mobile-browser "; } </script><div class="ocm-effect-wrap"><div class="ocm-effect-wrap-inner"><div id="ajax-loading-screen" data-disable-mobile="1" data-disable-fade-on-click="0" data-effect="standard" data-method="standard"><div class="loading-icon none"><div class="material-icon">
+									 <div class="spinner">
+										 <div class="right-side"><div class="bar"></div></div>
+										 <div class="left-side"><div class="bar"></div></div>
+									 </div>
+									 <div class="spinner color-2">
+										 <div class="right-side"><div class="bar"></div></div>
+										 <div class="left-side"><div class="bar"></div></div>
+									 </div>
+								 </div></div></div>	
+	<div id="header-space"  data-header-mobile-fixed='1'></div> 
+	
+		
+	<div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="1" data-ptnm="false" data-lhe="animated_underline" data-user-set-bg="#ffffff" data-format="centered-menu" data-permanent-transparent="false" data-megamenu-rt="1" data-remove-fixed="0" data-header-resize="0" data-cart="false" data-transparency-option="" data-box-shadow="none" data-shrink-num="6" data-using-secondary="0" data-using-logo="0" data-logo-height="24" data-m-logo-height="24" data-padding="30" data-full-width="false" data-condense="false" data-transparent-header="true" data-transparent-shadow-helper="false" data-remove-border="true" class="transparent">
+		
+		
+<div id="search-outer" class="nectar">
+	<div id="search">
+		<div class="container">
+			 <div id="search-box">
+				 <div class="inner-wrap">
+					 <div class="col span_12">
+						  <form role="search" action="https://rajdeeproy.com/" method="GET">
+														 <input type="text" name="s"  value="" placeholder="Search" /> 
+							 								
+						<span>Hit enter to search or ESC to close</span>						</form>
+					</div><!--/span_12-->
+				</div><!--/inner-wrap-->
+			 </div><!--/search-box-->
+			 <div id="close"><a href="#">
+				<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span>				 </a></div>
+		 </div><!--/container-->
+	</div><!--/search-->
+</div><!--/search-outer-->
+
+<header id="top">
+	<div class="container">
+		<div class="row">
+			<div class="col span_3">
+				<a id="logo" href="https://rajdeeproy.com" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false" class="no-image">
+					Rajdeep Roy 
+				</a>
+				
+							</div><!--/span_3-->
+			
+			<div class="col span_9 col_last">
+									<div class="slide-out-widget-area-toggle mobile-icon slide-out-from-right" data-custom-color="false" data-icon-animation="simple-transform">
+						<div> <a href="#sidewidgetarea" aria-label="Navigation Menu" aria-expanded="false" class="closed">
+							<span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span>
+						</a></div> 
+					</div>
+								
+									
+					<nav>
+						
+						<ul class="sf-menu">	
+							<li id="menu-item-5825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5825"><a href="https://rajdeeproy.com/">Home</a></li>
+<li id="menu-item-5838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5838"><a href="https://rajdeeproy.com/about-me/">About Me</a></li>
+<li id="menu-item-5837" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-5837"><a href="https://rajdeeproy.com/notebook/">Notebook</a></li>
+<li id="menu-item-5836" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5836"><a href="https://rajdeeproy.com/get-in-touch/">Get in Touch</a></li>
+						</ul>
+						
+
+													<ul class="buttons sf-menu" data-user-set-ocm="1">
+								
+								<li class="slide-out-widget-area-toggle" data-icon-animation="simple-transform" data-custom-color="false"><div> <a href="#sidewidgetarea" aria-label="Navigation Menu" aria-expanded="false" class="closed"> <span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span> </a> </div></li>								
+							</ul>
+												
+					</nav>
+					
+					<div class="logo-spacing" data-using-image="false">Rajdeep Roy</div>					
+				</div><!--/span_9-->
+				
+								
+			</div><!--/row-->
+					</div><!--/container-->
+	</header>
+		
+	</div>
+	
+		
+	<div id="ajax-content-wrap">
+		
+		<div id="page-header-wrap" data-animate-in-effect="zoom-out" data-midnight="light" class="fullscreen-header" ><div id="page-header-bg" class="not-loaded fullscreen-header hentry" data-post-hs="fullscreen" data-padding-amt="normal" data-animate-in-effect="zoom-out" data-midnight="light" data-text-effect="" data-bg-pos="center" data-alignment="left" data-alignment-v="middle" data-parallax="0" data-height="350"  style="background-color: #000;  ">					<div class="page-header-bg-image-wrap" id="nectar-page-header-p-wrap" data-parallax-speed="medium">
+						<div class="page-header-bg-image" style="background-image: url(https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png);"></div>
+					</div> 				
+				<div class="container"><img class="hidden-social-img" src="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png" alt="Learn Javascript &#8211; Variables &#038; Datatypes" />					
+					<div class="row">
+						<div class="col span_6 section-title blog-title" data-remove-post-date="0" data-remove-post-author="0" data-remove-post-comment-number="0">
+							<div class="inner-wrap">
+								
+								<a class="computer-science" href="https://rajdeeproy.com/category/computer-science/" >Computer Science</a><a class="technology" href="https://rajdeeproy.com/category/technology/" >Technology</a>								
+								<h1 class="entry-title">Learn Javascript &#8211; Variables &#038; Datatypes</h1>
+								
+																	<div class="author-section">
+										<span class="meta-author">  
+											<img alt='' src='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=100&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=200&#038;d=mm&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' loading='lazy'/>										</span> 
+										<div class="avatar-post-info vcard author">
+											<span class="fn"><a href="https://rajdeeproy.com/author/scott/" title="Posts by RajdeepRoy" rel="author">RajdeepRoy</a></span>
+											
+																							<span class="meta-date date updated"><i>March 31, 2019</i></span>
+																						
+										</div>
+									</div>
+																
+								
+														
+											</div>
+					
+				</div><!--/section-title-->
+			</div><!--/row-->
+
+						
+			
+			
+			</div><div class="scroll-down-wrap no-border"><a href="#" class="section-down-arrow "><svg class="nectar-scroll-icon" viewBox="0 0 30 45" enable-background="new 0 0 30 45">
+					<path class="nectar-scroll-icon-path" fill="none" stroke="#ffffff" stroke-width="2" stroke-miterlimit="10" d="M15,1.118c12.352,0,13.967,12.88,13.967,12.88v18.76  c0,0-1.514,11.204-13.967,11.204S0.931,32.966,0.931,32.966V14.05C0.931,14.05,2.648,1.118,15,1.118z"></path>
+					</svg></a></div>
+</div>
+
+</div>
+
+<div class="container-wrap fullscreen-blog-header" data-midnight="dark" data-remove-post-date="0" data-remove-post-author="0" data-remove-post-comment-number="0">
+	<div class="container main-content">
+		
+					
+		<div class="row">
+			
+						
+			<div class="post-area col  span_9">
+			
+			
+<article id="post-257" class="post-257 post type-post status-publish format-standard has-post-thumbnail category-computer-science category-technology tag-data-types tag-javascript tag-scopes tag-variables">
+  
+  <div class="inner-wrap">
+
+		<div class="post-content" data-hide-featured-media="0">
+      
+        <div class="content-inner"><p>Hello Everyone, Here on this post on Javascript we are going to discuss the variables and data types in javascript. So, the first question that comes to one&#8217;s mind is: What is a <strong>Variable?</strong> A variable is a place where some value is stored. In an alternative way, a variable can be considered as a container where something is stored.</p>
+<p><strong>The identifier</strong> &#8211; An identifier is a name by which a variable or a function is known. In  Javascript, any combination of letters, digits, underscores and dollar signs is allowed to make up an identifier*.</p>
+<p><strong>Choosing Variable names:</strong> One of the most important aspects of writing clear, understandable code is choosing the appropriate names for your variables. For Ex-</p>
+<p>var $ = &#8221; I am writing good code&#8221;  &#8211; not recommended.</p>
+<p>var _ = &#8221; This time it&#8217;s fine&#8221;  &#8211; still not recommended.</p>
+<p>So, what is the right way to declare a good variable? The answer is that a variable&#8217;s name must give some information about what it actually is intended to do or the purpose it will serve. A variable in Javascript is declared with the <strong>&#8216;var&#8217;</strong> keyword followed by the identifier. Some good examples of declaring variables are:</p>
+<p>var name =&#8221;John Doe&#8221;;<br />
+var shirt_name=&#8221;Peter England&#8221;;</p>
+<p>var pi = &#8220;3.14&#8221;<br />
+var cats =[&#8220;Tusy&#8221;, &#8220;Joye&#8221;, &#8220;Blue&#8221;];<br />
+var price =&#8221;$6.50&#8243;<br />
+&#8230;<br />
+etc.</p>
+<p>But certainly, you don&#8217;t want to name variables like as long as you wish,</p>
+<p>var IwantToNamemyVariablelikethis90 = &#8220;Bad way to write a variable&#8221;;<br />
+However, you can also use CamelCase formats for naming a variable or mix it with an AlphaNumeric format and that will work just fine. And always remember to end your variable declaration with a <strong>semi-colon (;)</strong>.</p>
+<p><strong>Case Sensitive &#8211;</strong> Since Javascript variables are case sensitive so Monday, monday &amp; MonDay are all different.<br />
+Wait, what?! Yes, you read that right. So for ex &#8211;</p>
+<p>var Monday =&#8221; This is Monday&#8221;;<br />
+var MonDay =&#8221;This is not same&#8221;;<br />
+var monday = &#8220;This is also not the same variable&#8221;;<br />
+So, Javascript will treat these 3 as different variables.</p>
+<p><strong>Variable minification &amp; obfuscation &#8211;</strong> Javascript developers always like to use the short variable names, like, x, a, b, c m1 etc etc. This is mostly done to decrease the characters from the page. This process is called &#8216;minification&#8217;.</p>
+<p>Ex- var m1, m2, m3 ;<br />
+So instead of using <strong>var yesterday, today, tomorrow;</strong></p>
+<p>One can write minified variables as  var y<em><strong>,t</strong></em>,to<em><strong>; </strong></em></p>
+<p>Variable obfuscation can be referred to with examples like</p>
+<p>var O110 ,O101, Oi01; where <strong>O</strong> is a letter which is presented with a mix of numbers that makes the general user confused like it&#8217;s a boolean value.</p>
+<p>Similarly, var _$ ,__$$, _$$$ ; is another way of obfuscation of variables.</p>
+<p><strong>Variable Scope &#8211; </strong>The scope of a variable can be considered as the accessibility of the variable from different parts of the program. In other words, from where the variable is visible, i.e. from where the variable is available for use once it&#8217;s available. A variable has a <strong>global &amp; local</strong> scope. A variable that can be visible from everywhere within a program is considered as a <em><strong>global variable</strong></em>. A variable which can be visible from a specific context ( a function ) can is considered of a local scope.A context is a set of defined data which is created for a specific purpose. Ex &#8211; function.</p>
+<p><strong>Reserved  Keywords:</strong> Now, since you are already good in declaring good variable names you should also learn about the fact that like all other programming languages there are some reserved keywords for Javascript by default which can not be used to name a variable. Ex &#8211; boolean, float, int, new, return etc. A complete list of the reserved keywords can be found <strong><a href="http://www.javascripter.net/faq/reserved.htm">here</a></strong>.</p>
+<p><strong>Constants &#8211;</strong> <a href="https://gameofthrones.fandom.com/wiki/Hodor"><strong>Hodor! Hodor!</strong></a> I think almost every <strong><a href="https://en.wikipedia.org/wiki/Game_of_Thrones">GOT</a></strong> fans are familiar with this word. Almost, similar to that Javascript has the provision of the constants but unfortunately, ECMAScript Edition 5 will doesn&#8217;t support constants on all browsers. A value can be made using the const operator.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="post-tags"><h4>Tags:</h4><a href="https://rajdeeproy.com/tag/data-types/" rel="tag">data types</a><a href="https://rajdeeproy.com/tag/javascript/" rel="tag">javascript</a><a href="https://rajdeeproy.com/tag/scopes/" rel="tag">scopes</a><a href="https://rajdeeproy.com/tag/variables/" rel="tag">variables</a><div class="clear"></div></div> </div>        
+      </div><!--/post-content-->
+      
+    </div><!--/inner-wrap-->
+    
+</article>
+<div id="single-below-header" data-remove-post-comment-number="0">
+		<span class="meta-category"><a class="computer-science" href="https://rajdeeproy.com/category/computer-science/" > <i class="icon-default-style steadysets-icon-book2"></i> Computer Science</a><a class="technology" href="https://rajdeeproy.com/category/technology/" > <i class="icon-default-style steadysets-icon-book2"></i> Technology</a></span>
+	<span class="meta-comment-count"><a class="comments-link" href="https://rajdeeproy.com/learn-javascript-variables-datatypes/#respond"><i class="icon-default-style steadysets-icon-chat-3"></i> No Comments</a></span>
+</div><!--/single-below-header-->
+
+<div id="author-bio" class="" data-has-tags="true">
+  
+	<div class="span_12">
+		
+	<img alt='RajdeepRoy' src='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=80&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=160&#038;d=mm&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>	<div id="author-info">
+		
+	  <h3><span></span> 
+		
+		<a href="https://rajdeeproy.com/author/scott/">RajdeepRoy</a>		</h3> 
+	  <p></p>
+		
+	</div>
+	
+		
+	<div class="clear"></div>
+	
+	</div><!--/span_12-->
+	
+</div><!--/author-bio-->
+
+		</div><!--/post-area-->
+			
+							
+				<div id="sidebar" data-nectar-ss="1" class="col span_3 col_last">
+					
+		<div id="recent-posts-2" class="widget widget_recent_entries">
+		<h4>Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="https://rajdeeproy.com/trip-to-ayodhya-hills/">Trip to Ayodhya Hills</a>
+									</li>
+											<li>
+					<a href="https://rajdeeproy.com/learn-javascript-variables-datatypes/" aria-current="page">Learn Javascript &#8211; Variables &#038; Datatypes</a>
+									</li>
+											<li>
+					<a href="https://rajdeeproy.com/singalila-trek-4-tumbling-to-kala-pokhri/">Singalila Trek &#8211; 4 : Tumbling to Kala Pokhri</a>
+									</li>
+											<li>
+					<a href="https://rajdeeproy.com/learn-javascript-a-few-things-to-remember/">Learn Javascript &#8211; A few things to Remember</a>
+									</li>
+											<li>
+					<a href="https://rajdeeproy.com/learn-javascript-my-first-javascript-program/">Learn Javascript &#8211; My First Javascript Program</a>
+									</li>
+					</ul>
+
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><h4>Recent Comments</h4><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href='https://www.altitudeadventureindia.com' rel='external nofollow ugc' class='url'>sohail</a></span> on <a href="https://rajdeeproy.com/singalila-trek-1-the-beginning-of-the-journey/#comment-6">Singalila Trek &#8211; 1: The Beginning of the Journey</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.rajdeeproy.com/singalila-trek-2-we-stepped-in-chitrey/' rel='external nofollow ugc' class='url'>Singalila Trek &#8211; 2: We stepped in Chitrey | Rajdeep Roy</a></span> on <a href="https://rajdeeproy.com/singalila-trek-3-amazing-meghma-to-tumbling/#comment-3">Singalila Trek – 3: Amazing Meghma to Tumbling</a></li><li class="recentcomments"><span class="comment-author-link"><a href='http://www.rajdeeproy.com/singalila-trek-1-the-beginning-of-the-journey/' rel='external nofollow ugc' class='url'>Singalila Trek &#8211; 1: The Beginning of the Journey | Rajdeep Roy</a></span> on <a href="https://rajdeeproy.com/singalila-trek-2-we-stepped-in-chitrey/#comment-2">Singalila Trek &#8211; 2: We stepped in Chitrey</a></li></ul></div>				</div><!--/sidebar-->
+				
+							
+		</div><!--/row-->
+
+		<div class="row">
+
+						 
+			 <div data-post-header-style="fullscreen" class="blog_next_prev_buttons wpb_row vc_row-fluid full-width-content standard_section" data-style="fullwidth_next_prev" data-midnight="light">
+				 
+				 <ul class="controls"><li class="previous-post "><div class="post-bg-img" style="background-image: url(https://rajdeeproy.com/wp-content/uploads/2019/08/ayodhya-hills.jpg);"></div><a href="https://rajdeeproy.com/trip-to-ayodhya-hills/"></a><h3><span>Previous Post</span><span class="text">Trip to Ayodhya Hills
+						 <svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3></li><li class="next-post "><div class="post-bg-img" style="background-image: url(https://rajdeeproy.com/wp-content/uploads/2017/09/rajdeep-roy.jpg);"></div><a href="https://rajdeeproy.com/singalila-trek-4-tumbling-to-kala-pokhri/"></a><h3><span>Next Post</span><span class="text">Singalila Trek - 4 : Tumbling to Kala Pokhri 
+						 <svg class="next-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 39 12"><line class="top" x1="23" y1="-0.5" x2="29.5" y2="6.5" stroke="#ffffff;"></line><line class="bottom" x1="23" y1="12.5" x2="29.5" y2="5.5" stroke="#ffffff;"></line></svg><span class="line"></span></span></h3></li></ul>
+			 </div>
+			 
+			 <div class="row vc_row-fluid full-width-section related-post-wrap" data-using-post-pagination="true" data-midnight="dark"> <div class="row-bg-wrap"><div class="row-bg"></div></div> <h3 class="related-title ">Related Posts</h3><div class="row span_12 blog-recent related-posts columns-2" data-style="material" data-color-scheme="light">					 
+					 <div class="col span_6">
+						 <div class="inner-wrap post-199 post type-post status-publish format-standard has-post-thumbnail category-computer-science category-technology category-uncategorized tag-computer-science-2 tag-javascript tag-rajdeep-roy tag-technology-2 tag-tutorials">
+							 
+							 <a href="https://rajdeeproy.com/learn-javascript-a-few-things-to-remember/" class="img-link"><span class="post-featured-img"><img width="300" height="300" src="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png" class="attachment-wide_photography size-wide_photography wp-post-image" alt="" loading="lazy" title="" srcset="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png 300w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-150x150.png 150w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-206x206.png 206w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-81x81.png 81w" sizes="(max-width: 300px) 100vw, 300px" /></span></a>							 
+							 <span class="meta-category"><a class="computer-science" href="https://rajdeeproy.com/category/computer-science/">Computer Science</a><a class="technology" href="https://rajdeeproy.com/category/technology/">Technology</a><a class="uncategorized" href="https://rajdeeproy.com/category/uncategorized/">Uncategorized</a></span>							 
+							 <a class="entire-meta-link" href="https://rajdeeproy.com/learn-javascript-a-few-things-to-remember/"></a>
+							 
+							 <div class="article-content-wrap">
+								 <div class="post-header">
+									 <span class="meta"> 
+										 									 </span> 
+									 <h3 class="title">Learn Javascript &#8211; A few things to Remember</h3>	
+								 </div><!--/post-header-->
+								 
+								 <div class="grav-wrap"><img alt='RajdeepRoy' src='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=70&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' loading='lazy'/><div class="text"> <a href="https://rajdeeproy.com/author/scott/">RajdeepRoy</a><span>September 4, 2017</span></div></div>							 </div>
+							 
+							 							 
+						 </div>
+					 </div>
+					 					 
+					 <div class="col span_6">
+						 <div class="inner-wrap post-181 post type-post status-publish format-standard has-post-thumbnail category-computer-science category-technology tag-atom tag-first-javascript-program tag-javascript tag-rajdeep-roy">
+							 
+							 <a href="https://rajdeeproy.com/learn-javascript-my-first-javascript-program/" class="img-link"><span class="post-featured-img"><img width="300" height="300" src="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png" class="attachment-wide_photography size-wide_photography wp-post-image" alt="" loading="lazy" title="" srcset="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png 300w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-150x150.png 150w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-206x206.png 206w, https://rajdeeproy.com/wp-content/uploads/2017/08/javascript-81x81.png 81w" sizes="(max-width: 300px) 100vw, 300px" /></span></a>							 
+							 <span class="meta-category"><a class="computer-science" href="https://rajdeeproy.com/category/computer-science/">Computer Science</a><a class="technology" href="https://rajdeeproy.com/category/technology/">Technology</a></span>							 
+							 <a class="entire-meta-link" href="https://rajdeeproy.com/learn-javascript-my-first-javascript-program/"></a>
+							 
+							 <div class="article-content-wrap">
+								 <div class="post-header">
+									 <span class="meta"> 
+										 									 </span> 
+									 <h3 class="title">Learn Javascript &#8211; My First Javascript Program</h3>	
+								 </div><!--/post-header-->
+								 
+								 <div class="grav-wrap"><img alt='RajdeepRoy' src='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=70&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/b7110d99757d42f27dd3fe5f4afdde63?s=140&#038;d=mm&#038;r=g 2x' class='avatar avatar-70 photo' height='70' width='70' loading='lazy'/><div class="text"> <a href="https://rajdeeproy.com/author/scott/">RajdeepRoy</a><span>August 30, 2017</span></div></div>							 </div>
+							 
+							 							 
+						 </div>
+					 </div>
+					 </div></div>
+			<div class="comments-section" data-author-bio="true">
+				
+<div class="comment-wrap " data-midnight="dark" data-comments-open="true">
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/learn-javascript-variables-datatypes/#respond" style="display:none;">Cancel Reply</a></small></h3><form action="https://rajdeeproy.com/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="row"><div class="col span_12"><label for="comment">My comment is..</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></div></div><div class="row"> <div class="col span_4"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" /></div>
+<div class="col span_4"><label for="email">Email <span class="required">*</span></label><input id="email" name="email" type="text" value="" size="30" /></div>
+<div class="col span_4 col_last"><label for="url">Website</label><input id="url" name="url" type="text" value="" size="30" /></div></div>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /><label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Submit Comment" /> <input type='hidden' name='comment_post_ID' value='257' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="150"/></p></form>	</div><!-- #respond -->
+	
+</div>			</div>   
+
+		</div><!--/row-->
+
+	</div><!--/container main-content-->
+
+</div><!--/container-wrap-->
+
+<div class="nectar-social fixed" data-position="" data-rm-love="0" data-color-override="override"><a href="#"><i class="icon-default-style steadysets-icon-share"></i></a><div class="nectar-social-inner"><a class='facebook-share nectar-sharing' href='#' title='Share this'> <i class='fa fa-facebook'></i> <span class='social-text'>Share</span> </a><a class='twitter-share nectar-sharing' href='#' title='Tweet this'> <i class='fa fa-twitter'></i> <span class='social-text'>Tweet</span> </a><a class='linkedin-share nectar-sharing' href='#' title='Share this'> <i class='fa fa-linkedin'></i> <span class='social-text'>Share</span> </a><a class='pinterest-share nectar-sharing' href='#' title='Pin this'> <i class='fa fa-pinterest'></i> <span class='social-text'>Pin</span> </a></div></div>
+<div id="footer-outer" data-midnight="light" data-cols="5" data-custom-color="true" data-disable-copyright="true" data-matching-section-color="true" data-copyright-line="true" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="true" data-link-hover="default">
+	
+		
+	<div id="footer-widgets" data-has-widgets="true" data-cols="5">
+		
+		<div class="container">
+			
+						
+			<div class="row">
+				
+								
+				<div class="col span_3">
+					<!-- Footer widget area 1 -->
+					<div id="text-2" class="widget widget_text">			<div class="textwidget"><p>Copyright © 2019 &#8211; 2020.<br />
+All Rights Reserved.</p>
+</div>
+		</div>					</div><!--/span_3-->
+					
+											
+						<div class="col span_3">
+							<!-- Footer widget area 2 -->
+							<div id="text-8" class="widget widget_text"><h4>TWITTER:</h4>			<div class="textwidget"><!-- Custom Twitter Feeds by Smash Balloon --><div id="ctf" class="ctf ctf-type-usertimeline  ctf-styles" style="" data-ctfshortcode="{}" data-ctfintents="1" data-ctfneeded="-1"><div class="ctf-header ctf-no-bio" style=""><a href="https://twitter.com/RJRoyz" target="_blank" title="@RJRoyz" class="ctf-header-link" rel="noopener noreferrer"><div class="ctf-header-text"><p class="ctf-header-user" style=""><span class="ctf-header-name">Rajdeep Roy🌈 {⌨️}🍎</span><span class="ctf-header-follow"><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>Follow</span></p></div><div class="ctf-header-img"><div class="ctf-header-img-hover"><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></div><img src="https://pbs.twimg.com/profile_images/1191260111718666241/8bLO3eV0_normal.jpg" alt="Rajdeep Roy🌈 {⌨️}🍎" width="48" height="48"></div></a></div><div class="ctf-tweets"><div class="ctf-item ctf-author-rjroyz ctf-new ctf-retweet" id="1387660634196570119" style=""><div class="ctf-context"><a href="https://twitter.com/intent/user?screen_name=RJRoyz" target="_blank" class="ctf-retweet-icon" rel="noopener noreferrer"><svg class="svg-inline--fa fa-retweet fa-w-20" aria-hidden="true" aria-label="retweet" data-fa-processed="" data-prefix="fa" data-icon="retweet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path></svg><span class="ctf-screenreader">Retweet on Twitter</span></a><a href="https://twitter.com/RJRoyz" target="_blank" class="ctf-retweet-text" style="" rel="noopener noreferrer">Rajdeep Roy🌈 {⌨️}🍎 Retweeted</a></div><div class="ctf-author-box"><div class="ctf-author-box-link" style=""><a href="https://twitter.com/Binged_" class="ctf-author-avatar" target="_blank" style="" rel="noopener noreferrer"><img src="https://pbs.twimg.com/profile_images/1099028551540580358/t0NrUm7m_normal.png" alt="Binged_" width="48" height="48"></a><a href="https://twitter.com/Binged_" target="_blank" class="ctf-author-name" style="" rel="noopener noreferrer">BINGED</a><span class="ctf-verified" ><svg class="svg-inline--fa fa-check-circle fa-w-16" aria-hidden="true" aria-label="verified" data-fa-processed="" data-prefix="fa" data-icon="check-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"></path></svg></span><a href="https://twitter.com/Binged_" class="ctf-author-screenname" target="_blank" style="" rel="noopener noreferrer">@Binged_</a><span class="ctf-screename-sep">&middot;</span><div class="ctf-tweet-meta"><a href="https://twitter.com/Binged_/status/1387629630924853254" class="ctf-tweet-date" target="_blank" style="" rel="noopener noreferrer">29 Apr</a></div></div><div class="ctf-corner-logo" style=""><svg class="svg-inline--fa fa-twitter fa-w-16" aria-hidden="true" aria-label="twitter logo" data-fa-processed="" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg></div></div><div class="ctf-tweet-content"><p class="ctf-tweet-text" style="">29.4.2020<br />
+<br />
+One year of missing #IrrfanKhan<br />
+<br />
+Will the film industry ever recover from the loss of the colossal talent 😔<br />
+<br />
+#RememberingIrrfanKhan </p><a href="https://twitter.com/Binged_/status/1387629630924853254" target="_blank" class="ctf-tweet-text-media-wrap" rel="noopener noreferrer"><svg aria-hidden="true" aria-label="video in tweet" focusable="false" data-prefix="far" data-icon="file-video" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="svg-inline--fa fa-file-video fa-w-12 fa-9x ctf-tweet-text-media"><path fill="currentColor" d="M369.941 97.941l-83.882-83.882A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v416c0 26.51 21.49 48 48 48h288c26.51 0 48-21.49 48-48V131.882a48 48 0 0 0-14.059-33.941zM332.118 128H256V51.882L332.118 128zM48 464V48h160v104c0 13.255 10.745 24 24 24h104v288H48zm228.687-211.303L224 305.374V268c0-11.046-8.954-20-20-20H100c-11.046 0-20 8.954-20 20v104c0 11.046 8.954 20 20 20h104c11.046 0 20-8.954 20-20v-37.374l52.687 52.674C286.704 397.318 304 390.28 304 375.986V264.011c0-14.311-17.309-21.319-27.313-11.314z" class=""></path></svg></a></div><div class="ctf-tweet-actions"><a href="https://twitter.com/intent/tweet?in_reply_to=1387629630924853254&related=Binged_" class="ctf-reply" target="_blank" style="" rel="noopener noreferrer"><svg class="svg-inline--fa fa-reply fa-w-16" aria-hidden="true" aria-label="reply" data-fa-processed="" data-prefix="fa" data-icon="reply" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M8.309 189.836L184.313 37.851C199.719 24.546 224 35.347 224 56.015v80.053c160.629 1.839 288 34.032 288 186.258 0 61.441-39.581 122.309-83.333 154.132-13.653 9.931-33.111-2.533-28.077-18.631 45.344-145.012-21.507-183.51-176.59-185.742V360c0 20.7-24.3 31.453-39.687 18.164l-176.004-152c-11.071-9.562-11.086-26.753 0-36.328z"></path></svg><span class="ctf-screenreader">Reply on Twitter 1387629630924853254</span></a><a href="https://twitter.com/intent/retweet?tweet_id=1387629630924853254&related=Binged_" class="ctf-retweet" target="_blank" style="" rel="noopener noreferrer"><svg class="svg-inline--fa fa-retweet fa-w-20" aria-hidden="true" aria-label="retweet" data-fa-processed="" data-prefix="fa" data-icon="retweet" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M629.657 343.598L528.971 444.284c-9.373 9.372-24.568 9.372-33.941 0L394.343 343.598c-9.373-9.373-9.373-24.569 0-33.941l10.823-10.823c9.562-9.562 25.133-9.34 34.419.492L480 342.118V160H292.451a24.005 24.005 0 0 1-16.971-7.029l-16-16C244.361 121.851 255.069 96 276.451 96H520c13.255 0 24 10.745 24 24v222.118l40.416-42.792c9.285-9.831 24.856-10.054 34.419-.492l10.823 10.823c9.372 9.372 9.372 24.569-.001 33.941zm-265.138 15.431A23.999 23.999 0 0 0 347.548 352H160V169.881l40.416 42.792c9.286 9.831 24.856 10.054 34.419.491l10.822-10.822c9.373-9.373 9.373-24.569 0-33.941L144.971 67.716c-9.373-9.373-24.569-9.373-33.941 0L10.343 168.402c-9.373 9.373-9.373 24.569 0 33.941l10.822 10.822c9.562 9.562 25.133 9.34 34.419-.491L96 169.881V392c0 13.255 10.745 24 24 24h243.549c21.382 0 32.09-25.851 16.971-40.971l-16.001-16z"></path></svg><span class="ctf-screenreader">Retweet on Twitter 1387629630924853254</span><span class="ctf-action-count ctf-retweet-count">70</span></a><a href="https://twitter.com/intent/like?tweet_id=1387629630924853254&related=Binged_" class="ctf-like" target="_blank" style="" rel="noopener noreferrer"><svg class="svg-inline--fa fa-heart fa-w-18" aria-hidden="true" aria-label="like" data-fa-processed="" data-prefix="fa" data-icon="heart" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"></path></svg><span class="ctf-screenreader">Like on Twitter 1387629630924853254</span><span class="ctf-action-count ctf-favorite-count">271</span></a><a href="https://twitter.com/Binged_/status/1387629630924853254" class="ctf-twitterlink" style="" target="_blank" rel="noopener noreferrer">Twitter <span class="ctf-screenreader">1387629630924853254</span></a></div></div></div><a href="javascript:void(0);" id="ctf-more" class="ctf-more" style=""><span>Load More...</span></a></div>
+</div>
+		</div>								
+							</div><!--/span_3-->
+							
+												
+						
+													<div class="col span_3">
+								<!-- Footer widget area 3 -->
+								<div id="text-7" class="widget widget_text"><h4>INSTAGRAM:</h4>			<div class="textwidget">
+<div id="sb_instagram" class="sbi sbi_col_3  sbi_width_resp" style="padding-bottom: 10px;width: 100%;" data-feedid="sbi_17841400210129968#9" data-res="auto" data-cols="3" data-num="9" data-shortcode-atts="{}" >
+	<div class="sb_instagram_header  sbi_no_avatar" style="padding: 5px; margin-bottom: 10px;padding-bottom: 0;">
+    <a href="https://www.instagram.com/rajdeep_royz/" target="_blank" rel="noopener nofollow noreferrer" title="@rajdeep_royz" class="sbi_header_link">
+        <div class="sbi_header_text sbi_no_bio">
+            <h3 >rajdeep_royz</h3>
+	                </div>
+                <div class="sbi_header_img">
+            <div class="sbi_header_hashtag_icon"><svg class="sbi_new_logo fa-instagram fa-w-14" aria-hidden="true" data-fa-processed="" aria-label="Instagram" data-prefix="fab" data-icon="instagram" role="img" viewBox="0 0 448 512">
+	                <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+	            </svg></div>
+        </div>
+        
+    </a>
+</div>
+    <div id="sbi_images" style="padding: 5px;">
+		<div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17898556615876215" data-date="1618590535">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CNu8rsVgQ3T/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/174784092_1003290773811659_351261527740532347_n.jpg?_nc_cat=106&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=-9iz8AzR4kcAX_ITZmg&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=ea9bd5e640ca3651692c0ee0c9f27a49&#038;oe=60B68618" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/174784092_1003290773811659_351261527740532347_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-9iz8AzR4kcAX_ITZmg&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=ea9bd5e640ca3651692c0ee0c9f27a49&amp;oe=60B68618&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CNu8rsVgQ3T\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CNu8rsVgQ3T\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/174784092_1003290773811659_351261527740532347_n.jpg?_nc_cat=106&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-9iz8AzR4kcAX_ITZmg&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=ea9bd5e640ca3651692c0ee0c9f27a49&amp;oe=60B68618&quot;}">
+            <span class="sbi-screenreader">Mixed Mushroom, Chicken and Corn soup to kick butt</span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Mixed Mushroom, Chicken and Corn soup to kick butt your appetite.Eat healthy! 🍄🌽🍵
+#weekend #sweetcorn #butter #mushroom #soup #dinner #bonappetit #weekend #dinnerideas🍴 #lockdown">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17913715624646770" data-date="1616917043">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CM9EwDqgGit/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/165330742_932008820960043_2336161669108312081_n.jpg?_nc_cat=101&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=z_eWVHNU62YAX_GQaQp&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=cd4ef32e0e716dbce785870c77c8faa6&#038;oe=60B6704A" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/165330742_932008820960043_2336161669108312081_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=z_eWVHNU62YAX_GQaQp&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=cd4ef32e0e716dbce785870c77c8faa6&amp;oe=60B6704A&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CM9EwDqgGit\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CM9EwDqgGit\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/165330742_932008820960043_2336161669108312081_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=z_eWVHNU62YAX_GQaQp&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=cd4ef32e0e716dbce785870c77c8faa6&amp;oe=60B6704A&quot;}">
+            <span class="sbi-screenreader">Wishing you all a very happy, colorful and safe Ho</span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Wishing you all a very happy, colorful and safe Holi. 🍥🥧✨
+Aap sabko Holi ke bahut bahut subhkamnay. 💟
+#happyholi #doljatra #love #sweets #holi #festivalseason #desserts #postoftheday">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17879449193135895" data-date="1616259880">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CMpfT53gP7k/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/162406623_459255432192679_4861234494008413438_n.jpg?_nc_cat=100&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=-bXgGNnjsgEAX9c7Myd&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=c78bfcfdad70843d889bb8db28952817&#038;oe=60B67610" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/162406623_459255432192679_4861234494008413438_n.jpg?_nc_cat=100&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-bXgGNnjsgEAX9c7Myd&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=c78bfcfdad70843d889bb8db28952817&amp;oe=60B67610&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CMpfT53gP7k\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CMpfT53gP7k\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/162406623_459255432192679_4861234494008413438_n.jpg?_nc_cat=100&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-bXgGNnjsgEAX9c7Myd&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=c78bfcfdad70843d889bb8db28952817&amp;oe=60B67610&quot;}">
+            <span class="sbi-screenreader">Hawaiian Cruise - Super delicious! Had some time t</span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Hawaiian Cruise - Super delicious! Had some time to take a munch with friends. 🍨🍧🍦🥰😊
+#weekendvibes #weekendmood #icecream #instafood #desserts #fruiticecream #vanilla #strawberry #chocolate #chocolatesyrup #postoftheday #scoop #scoopwhoop #friends #evening #icecreamlovers">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17852431088513878" data-date="1614780303">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CL9ZPhLguON/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/155506024_3670758386370539_6448522022620178295_n.jpg?_nc_cat=104&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=CFZwyezmHMYAX8BJGPX&#038;_nc_oc=AQkqd8DJrkkhPuqSdocev9gCGvjfT4Mw6tYvBQXK7bva4biLEQiP-YmVax5BlvUmk0w&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=d4b4abef5629eedcd25231f3b973fa9f&#038;oe=60B585E4" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/155506024_3670758386370539_6448522022620178295_n.jpg?_nc_cat=104&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=CFZwyezmHMYAX8BJGPX&amp;_nc_oc=AQkqd8DJrkkhPuqSdocev9gCGvjfT4Mw6tYvBQXK7bva4biLEQiP-YmVax5BlvUmk0w&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=d4b4abef5629eedcd25231f3b973fa9f&amp;oe=60B585E4&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CL9ZPhLguON\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CL9ZPhLguON\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/155506024_3670758386370539_6448522022620178295_n.jpg?_nc_cat=104&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=CFZwyezmHMYAX8BJGPX&amp;_nc_oc=AQkqd8DJrkkhPuqSdocev9gCGvjfT4Mw6tYvBQXK7bva4biLEQiP-YmVax5BlvUmk0w&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=d4b4abef5629eedcd25231f3b973fa9f&amp;oe=60B585E4&quot;}">
+            <span class="sbi-screenreader"></span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Delicious Desserts! 🍥🍘🥧🍰🧁🍦🍨🥧🥮🍩 ☺️💟
+#dinner #desserts #pudding #pastry #cake #croissant #chocolatecake #chocolatelovers #indiancuisine #foodstagram #instafood #brownies #picoftheday #treat #bbqnation #browniecake #happy #feelinggood #mood">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17870290928264831" data-date="1614251412">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CLtodrIAsV0/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/153267562_3489503627825918_7911724167945416369_n.jpg?_nc_cat=103&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=-AeXI6PoFzcAX-bcydC&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=85b7bd8fc1742e27627add7fc750e0dd&#038;oe=60B524CD" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/153267562_3489503627825918_7911724167945416369_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-AeXI6PoFzcAX-bcydC&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=85b7bd8fc1742e27627add7fc750e0dd&amp;oe=60B524CD&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CLtodrIAsV0\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CLtodrIAsV0\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/153267562_3489503627825918_7911724167945416369_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=-AeXI6PoFzcAX-bcydC&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=85b7bd8fc1742e27627add7fc750e0dd&amp;oe=60B524CD&quot;}">
+            <span class="sbi-screenreader"></span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="For starters only. 🤔 🥖🥯🍄
+#lunchtime🍴 #breadcreamcheese #instafood #starters #crunchy #baked #bbq #barbeque #mushrooms 💟">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17863687925334466" data-date="1613058484">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CLKFIlSAprw/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/149008953_1341750046173634_3701939505816544616_n.jpg?_nc_cat=108&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=O8mMzUQ00UwAX-T9QM9&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=2e43a7492acdba6ed1b264f118065b6f&#038;oe=60B6C821" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/149008953_1341750046173634_3701939505816544616_n.jpg?_nc_cat=108&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=O8mMzUQ00UwAX-T9QM9&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=2e43a7492acdba6ed1b264f118065b6f&amp;oe=60B6C821&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CLKFIlSAprw\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CLKFIlSAprw\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/149008953_1341750046173634_3701939505816544616_n.jpg?_nc_cat=108&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=O8mMzUQ00UwAX-T9QM9&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=2e43a7492acdba6ed1b264f118065b6f&amp;oe=60B6C821&quot;}">
+            <span class="sbi-screenreader">Change in moods. I got the Venezuelan flavor 💟 </span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Change in moods. I got the Venezuelan flavor 💟 What&#039;s yours? 
+#darkchocolate #chocolate #worklifebalance #swag #postoftheday">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_18059788651266719" data-date="1609398111">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CJc_hryAxeF/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/134494716_232807661748511_8004918498472589503_n.jpg?_nc_cat=100&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=L_v9L11kMhAAX9DGR0A&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=b50b3de0181f7a615954646f0a927718&#038;oe=60B40F4B" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/134494716_232807661748511_8004918498472589503_n.jpg?_nc_cat=100&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=L_v9L11kMhAAX9DGR0A&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=b50b3de0181f7a615954646f0a927718&amp;oe=60B40F4B&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CJc_hryAxeF\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CJc_hryAxeF\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/134494716_232807661748511_8004918498472589503_n.jpg?_nc_cat=100&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=L_v9L11kMhAAX9DGR0A&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=b50b3de0181f7a615954646f0a927718&amp;oe=60B40F4B&quot;}">
+            <span class="sbi-screenreader"></span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Year Ending Lunch - Konji Crispy Chicken 🍅🌶️💟 🍗
+#lunch #yearending #newyear #newyeareve #thaifood #chinesefood #betterhalf #love #happy">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17910624325570670" data-date="1608984297">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CJQqPMqgUQI/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/133068155_1103025013470237_1815693324858400929_n.jpg?_nc_cat=101&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=CD7e9XQMjQEAX-OxTK8&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=b175943059f6e6eaf0dcdd1a7a4f1592&#038;oe=60B3F51E" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/133068155_1103025013470237_1815693324858400929_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=CD7e9XQMjQEAX-OxTK8&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=b175943059f6e6eaf0dcdd1a7a4f1592&amp;oe=60B3F51E&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CJQqPMqgUQI\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CJQqPMqgUQI\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/133068155_1103025013470237_1815693324858400929_n.jpg?_nc_cat=101&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=CD7e9XQMjQEAX-OxTK8&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=b175943059f6e6eaf0dcdd1a7a4f1592&amp;oe=60B3F51E&quot;}">
+            <span class="sbi-screenreader">Lung Phun Soup 🍵
+#weekendvibes #shopping #xmas </span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Lung Phun Soup 🍵
+#weekendvibes #shopping #xmas #unlockdown #picoftheday📸 #happy #love #swag 🥦🌽🍗🥕🍄🌶️🍅#foodstagram">
+        </a>
+    </div>
+</div><div class="sbi_item sbi_type_image sbi_new sbi_transition" id="sbi_17937882091417142" data-date="1607849592">
+    <div class="sbi_photo_wrap">
+        <a class="sbi_photo" href="https://www.instagram.com/p/CIu19eSA5w8/" target="_blank" rel="noopener nofollow noreferrer" data-full-res="https://scontent-atl3-1.cdninstagram.com/v/t51.29350-15/130484159_828192397755371_7988509687653607120_n.jpg?_nc_cat=103&#038;ccb=1-3&#038;_nc_sid=8ae9d6&#038;_nc_ohc=yI-dsfh-G0gAX9m9Tv2&#038;_nc_ht=scontent-atl3-1.cdninstagram.com&#038;oh=f0742cc73a078178a0c1e58d4de0d1e2&#038;oe=60B6667A" data-img-src-set="{&quot;d&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/130484159_828192397755371_7988509687653607120_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=yI-dsfh-G0gAX9m9Tv2&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=f0742cc73a078178a0c1e58d4de0d1e2&amp;oe=60B6667A&quot;,&quot;150&quot;:&quot;https:\/\/www.instagram.com\/p\/CIu19eSA5w8\/media\/?size=t&quot;,&quot;320&quot;:&quot;https:\/\/www.instagram.com\/p\/CIu19eSA5w8\/media\/?size=m&quot;,&quot;640&quot;:&quot;https:\/\/scontent-atl3-1.cdninstagram.com\/v\/t51.29350-15\/130484159_828192397755371_7988509687653607120_n.jpg?_nc_cat=103&amp;ccb=1-3&amp;_nc_sid=8ae9d6&amp;_nc_ohc=yI-dsfh-G0gAX9m9Tv2&amp;_nc_ht=scontent-atl3-1.cdninstagram.com&amp;oh=f0742cc73a078178a0c1e58d4de0d1e2&amp;oe=60B6667A&quot;}">
+            <span class="sbi-screenreader">Anniversary Special Menu - Cheese Chicken Fire Bal</span>
+            	                    <img src="https://rajdeeproy.com/wp-content/plugins/instagram-feed/img/placeholder.png" alt="Anniversary Special Menu - Cheese Chicken Fire Balls 😊💟#anniversarydate #lunch #foodstagram #sundaydelight #chickenrecipes #foodporn #picoftheday #sundayvibes #anniversary #love">
+        </a>
+    </div>
+</div>    </div>
+
+	<div id="sbi_load">
+
+	
+	    <span class="sbi_follow_btn sbi_custom">
+        <a href="https://www.instagram.com/rajdeep_royz/" style="background: rgb(230,230,230);color: rgb(126,102,102);" target="_blank" rel="noopener nofollow noreferrer"><svg class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" data-fa-processed="" aria-label="Instagram" data-prefix="fab" data-icon="instagram" role="img" viewBox="0 0 448 512">
+	                <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+	            </svg>Follow on Instagram</a>
+    </span>
+	
+</div>
+	    <span class="sbi_resized_image_data" data-feed-id="sbi_17841400210129968#9" data-resized="{&quot;17937882091417142&quot;:{&quot;id&quot;:&quot;130484159_828192397755371_7988509687653607120_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17910624325570670&quot;:{&quot;id&quot;:&quot;133068155_1103025013470237_1815693324858400929_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;18059788651266719&quot;:{&quot;id&quot;:&quot;134494716_232807661748511_8004918498472589503_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17863687925334466&quot;:{&quot;id&quot;:&quot;149008953_1341750046173634_3701939505816544616_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17870290928264831&quot;:{&quot;id&quot;:&quot;153267562_3489503627825918_7911724167945416369_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17852431088513878&quot;:{&quot;id&quot;:&quot;155506024_3670758386370539_6448522022620178295_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17879449193135895&quot;:{&quot;id&quot;:&quot;162406623_459255432192679_4861234494008413438_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17913715624646770&quot;:{&quot;id&quot;:&quot;165330742_932008820960043_2336161669108312081_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}},&quot;17898556615876215&quot;:{&quot;id&quot;:&quot;174784092_1003290773811659_351261527740532347_n&quot;,&quot;ratio&quot;:&quot;1.00&quot;,&quot;sizes&quot;:{&quot;full&quot;:640,&quot;low&quot;:320}}}">
+	</span>
+	</div>
+
+
+</div>
+		</div>									
+								</div><!--/span_3-->
+														
+															<div class="col span_3">
+									<!-- Footer widget area 4 -->
+												<div id="recent-posts-extra-3" class="widget recent_posts_extra_widget">			<h4>RECENT NOTES:</h4>				
+			<ul class="nectar_blog_posts_recent_extra nectar_widget" data-style="featured-image-left">
+				
+			<li class="has-img"><a href="https://rajdeeproy.com/trip-to-ayodhya-hills/"> <span class="popular-featured-img"><img width="100" height="100" src="https://rajdeeproy.com/wp-content/uploads/2019/08/ayodhya-hills-100x100.jpg" class="attachment-portfolio-widget size-portfolio-widget wp-post-image" alt="" loading="lazy" title="" /></span><span class="meta-wrap"><span class="post-title">Trip to Ayodhya Hills</span> <span class="post-date">August 3, 2019</span></span></a></li><li class="has-img"><a href="https://rajdeeproy.com/learn-javascript-variables-datatypes/"> <span class="popular-featured-img"><img width="100" height="100" src="https://rajdeeproy.com/wp-content/uploads/2017/08/javascript.png" class="attachment-portfolio-widget size-portfolio-widget wp-post-image" alt="" loading="lazy" title="" /></span><span class="meta-wrap"><span class="post-title">Learn Javascript &#8211; Variables &#038; Datatypes</span> <span class="post-date">March 31, 2019</span></span></a></li><li class="has-img"><a href="https://rajdeeproy.com/singalila-trek-4-tumbling-to-kala-pokhri/"> <span class="popular-featured-img"><img width="100" height="67" src="https://rajdeeproy.com/wp-content/uploads/2017/09/rajdeep-roy.jpg" class="attachment-portfolio-widget size-portfolio-widget wp-post-image" alt="" loading="lazy" title="" /></span><span class="meta-wrap"><span class="post-title">Singalila Trek &#8211; 4 : Tumbling to Kala Pokhri</span> <span class="post-date">September 20, 2017</span></span></a></li>			</ul>
+			</div>											
+									</div><!--/span_3-->
+																
+							</div><!--/row-->
+							
+														
+						</div><!--/container-->
+						
+					</div><!--/footer-widgets-->
+					
+						
+</div><!--/footer-outer-->
+
+	
+	<div id="slide-out-widget-area-bg" class="slide-out-from-right dark">
+				</div>
+		
+		<div id="slide-out-widget-area" class="slide-out-from-right" data-dropdown-func="separate-dropdown-parent-link" data-back-txt="Back">
+			
+			<div class="inner-wrap">			
+			<div class="inner" data-prepend-menu-mobile="true">
+				
+				<a class="slide_out_area_close" href="#">
+					<span class="close-wrap"> <span class="close-line close-line1"></span> <span class="close-line close-line2"></span> </span>				</a>
+				
+				
+									<div class="off-canvas-menu-container mobile-only">
+						
+												
+						<ul class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5825"><a href="https://rajdeeproy.com/">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5838"><a href="https://rajdeeproy.com/about-me/">About Me</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-5837"><a href="https://rajdeeproy.com/notebook/">Notebook</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5836"><a href="https://rajdeeproy.com/get-in-touch/">Get in Touch</a></li>
+							
+						</ul>
+						
+						<ul class="menu secondary-header-items">
+													</ul>
+					</div>
+					<div id="text-5" class="widget widget_text"><h4>Welcome to my personal website.</h4>			<div class="textwidget"><p>I&#8217;ll be more than happy to help you with the best of my abilities.</p>
+</div>
+		</div><div id="text-6" class="widget widget_text">			<div class="textwidget"><h4>Fun Facts</h4>
+<p>I am a bookworm and a food buff. 🙂</p>
+</div>
+		</div>					
+				</div>
+				
+				<div class="bottom-meta-wrap"><ul class="off-canvas-social-links"></ul></div><!--/bottom-meta-wrap--></div> <!--/inner-wrap-->					
+				</div>
+		
+</div> <!--/ajax-content-wrap-->
+
+	<a id="to-top" class="
+	mobile-enabled	"><i class="fa fa-angle-up"></i></a>
+	</div></div><!--/ocm-effect-wrap--><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://rajdeeproy.com/wp-admin/admin-ajax.php";
+</script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/rajdeeproy.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3.2' id='contact-form-7-js'></script>
+<script type='text/javascript' id='salient-social-js-extra'>
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/rajdeeproy.com\/wp-admin\/admin-ajax.php","postID":"257","rooturl":"https:\/\/rajdeeproy.com","loveNonce":"f0337d0d60"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/salient-social/js/salient-social.js?ver=1.1' id='salient-social-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/jquery.easing.js?ver=1.3' id='jquery-easing-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/jquery.mousewheel.js?ver=3.1.13' id='jquery-mousewheel-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/priority.js?ver=12.1.2' id='nectar_priority-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/transit.js?ver=0.9.9' id='nectar-transit-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/waypoints.js?ver=4.0.1' id='nectar-waypoints-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/salient-portfolio/js/third-party/imagesLoaded.min.js?ver=4.1.4' id='imagesLoaded-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/hoverintent.js?ver=1.9' id='hoverintent-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/magnific.js?ver=7.0.1' id='magnific-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/superfish.js?ver=1.4.8' id='superfish-js'></script>
+<script type='text/javascript' id='nectar-frontend-js-extra'>
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/rajdeeproy.com\/wp-admin\/admin-ajax.php","postID":"257","rooturl":"https:\/\/rajdeeproy.com","disqusComments":"false","loveNonce":"f0337d0d60","mapApiKey":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/init.js?ver=12.1.2' id='nectar-frontend-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/themes/salient/js/third-party/stickkit.js?ver=1.0' id='stickykit-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/salient-core/js/third-party/touchswipe.min.js?ver=1.0' id='touchswipe-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-includes/js/comment-reply.min.js?ver=5.5.4' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-includes/js/wp-embed.min.js?ver=5.5.4' id='wp-embed-js'></script>
+<script type='text/javascript' id='ctf_scripts-js-extra'>
+/* <![CDATA[ */
+var ctf = {"ajax_url":"https:\/\/rajdeeproy.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/custom-twitter-feeds/js/ctf-scripts.min.js?ver=1.5.1' id='ctf_scripts-js'></script>
+<script type='text/javascript' id='sb_instagram_scripts-js-extra'>
+/* <![CDATA[ */
+var sb_instagram_js_options = {"font_method":"svg","resized_url":"https:\/\/rajdeeproy.com\/wp-content\/uploads\/sb-instagram-feed-images\/","placeholder":"https:\/\/rajdeeproy.com\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://rajdeeproy.com/wp-content/plugins/instagram-feed/js/sb-instagram-2-2.min.js?ver=2.4.6' id='sb_instagram_scripts-js'></script>
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 76/90 objects using disk
+Page Caching using disk: enhanced 
+
+Served from: rajdeeproy.com @ 2021-05-03 04:47:42 by W3 Total Cache
+-->

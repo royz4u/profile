@@ -1,0 +1,23 @@
+[27-Jul-2020 23:33:25 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home1/royz4u/public_html/wp-includes/locale.php:11
+Stack trace:
+#0 {main}
+  thrown in /home1/royz4u/public_html/wp-includes/locale.php on line 11
+[29-Jul-2020 06:22:44 America/Chicago] PHP Fatal error:  Class 'Walker' not found in /home1/royz4u/public_html/wp-includes/class-walker-nav-menu.php on line 17
+[03-Oct-2020 21:42:17 America/Chicago] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[03-Oct-2020 21:42:17 America/Chicago] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[03-Oct-2020 21:42:17 America/Chicago] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[03-Oct-2020 21:42:17 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[03-Oct-2020 21:42:17 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[03-Oct-2020 21:42:17 America/Chicago] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 07:20:08 America/Chicago] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[23-Jan-2021 07:20:08 America/Chicago] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 07:20:08 America/Chicago] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 07:20:08 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 07:20:08 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 07:20:08 America/Chicago] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 13:24:10 America/Chicago] PHP Warning:  Version warning: Imagick was compiled against Image Magick version 1654 but version 1650 is loaded. Imagick will run but may behave surprisingly in Unknown on line 0
+[23-Jan-2021 13:24:10 America/Chicago] PHP Warning:  Use of undefined constant ABSPATH - assumed 'ABSPATH' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 13:24:10 America/Chicago] PHP Warning:  Use of undefined constant WPINC - assumed 'WPINC' (this will throw an Error in a future version of PHP) in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 13:24:10 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 13:24:10 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home1/royz4u/public_html/wp-includes/functions.php on line 8
+[23-Jan-2021 13:24:10 America/Chicago] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home1/royz4u/public_html/wp-includes/functions.php on line 8
